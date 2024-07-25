@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo</title>
+    <link rel="stylesheet" type="text/css" href="/styles/clases.css">
+</head>
+<body>
+    <nav>
+        <ul class="breadcrumb">
+            <li><a href="asignatura">Volver</a></li>
+            <li><a href="clases">Grupo 1</a></li>
+            <li><a href="clases2">Grupo 2</a></li>
+            <li><a href="#">Grupo 3</a></li>
+            <li><a href="clases">Grupo 4</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Grupo</h1>
+        <div class="group">
+            <div class="item">
+                <div class="title">Estudiantes Designados</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DNI</th>
+                            <th>Primer Nombre</th>
+                            <th>Segundo Nombre</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% estudiante.forEach(estudiante => { %>
+                            <tr>
+                                <td><%= estudiante.DNI %></td>
+                                <td><%= estudiante.Primer_nombre %></td>
+                                <td><%= estudiante.Segundo_nombre %></td>
+                                <td><%= estudiante.Apellido_paterno %></td>
+                                <td><%= estudiante.Apellido_materno %></td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="item">
+                <div class="title">Docente</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Primer Nombre</th>
+                            <th>Segundo Nombre</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><%= docente.primer_nombre %></td>
+                            <td><%= docente.segundo_nombre %></td>
+                            <td><%= docente.apellido_paterno %></td>
+                            <td><%= docente.apellido_materno %></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="title">Asignatura</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Periodo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><%= asignatura.Id_de_la_asignatura %></td>
+                            <td><%= asignatura.Nombre %></td>
+                            <td><%= asignatura.Id_del_periodo %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

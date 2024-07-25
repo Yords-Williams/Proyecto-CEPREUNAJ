@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Matrícula CEPREUNAJ</title>
+    <link rel="stylesheet" type="text/css" href="/styles/Ficha.css">
+</head>
+<body>
+    <header>
+        <img src="/image/logo.jpg" alt="Logo CEPREUNAJ" class="logo">
+        <h1>Ficha de Matrícula CEPREUNAJ</h1>
+    </header>
+    <form action="/registrar" method="POST">
+        <div class="container">
+            <h2>INSCRIPCION DE DOCENTES</h2>
+            <table>
+                <tr>
+                    <th><label for="dni">DNI</label></th>
+                    <td><input type="text" id="dni" name="dni" required maxlength="8" minlength="8"></td>
+                </tr>
+                <tr>
+                    <th><label for="primer-nombre">Primer Nombre</label></th>
+                    <td><input type="text" id="primer-nombre" name="primer-nombre" required></td>
+                </tr>
+                <tr>
+                    <th><label for="segundo-nombre">Segundo Nombre</label></th>
+                    <td><input type="text" id="segundo-nombre" name="segundo-nombre"></td>
+                </tr>
+                <tr>
+                    <th><label for="tercer-nombre">Tercer Nombre</label></th>
+                    <td><input type="text" id="tercer-nombre" name="tercer-nombre"></td>
+                </tr>
+                <tr>
+                    <th><label for="apellido-paterno">Apellido Paterno</label></th>
+                    <td><input type="text" id="apellido-paterno" name="apellido-paterno" required></td>
+                </tr>
+                <tr>
+                    <th><label for="apellido-materno">Apellido Materno</label></th>
+                    <td><input type="text" id="apellido-materno" name="apellido-materno" required></td>
+                </tr>
+                <tr>
+                    <th><label for="celular">Número de Celular</label></th>
+                    <td><input type="tel" id="celular" name="celular"></td>
+                </tr>
+                <tr>
+                    <th><label for="correo">Correo Electrónico</label></th>
+                    <td><input type="email" id="correo" name="correo"></td>
+                </tr>
+            </table>
+            <button type="submit" class="btn submit">Registrar</button>
+            <a href="/convocatoria"><button type="button" class="btn volver">Cancelar</button></a>
+
+        </div>
+    </form>
+    
+</body>
+</html>

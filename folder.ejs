@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Usuarios</title>
+    <link rel="stylesheet" href="/styles/fol.css">
+</head>
+<body>
+    <nav>
+        <ul class="breadcrumb">
+                <li><a href="/">INICIO</a></li>
+                <li><a href="#">ESTUDIANTES</a></li>
+                <li><a href="/docente">DOCENTES</a></li>
+        </ul>
+    </nav>
+    <h1>Estudiantes Matriculados en la CEPREUNAJ</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>DNI</th>
+                <th>Primer Nombre</th>
+                <th>Segundo Nombre</th>
+                <th>Tercer Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Número de Celular</th>
+                <th>Correo Electrónico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% results.forEach((user) => { %>
+            <tr>
+                <td><%= user.DNI %></td>
+                <td><%= user.Primer_nombre %></td>
+                <td><%= user.Segundo_nombre %></td>
+                <td><%= user.Tercer_nombre %></td>
+                <td><%= user.Apellido_paterno %></td>
+                <td><%= user.Apellido_materno %></td>
+                <td><%= user.Numero_de_celular %></td>
+                <td><%= user.Correo_electronico %></td>
+            </tr>
+        <% }) %>
+
+        </tbody>
+    </table>
+</body>
+</html>

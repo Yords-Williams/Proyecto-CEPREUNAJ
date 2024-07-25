@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Usuarios</title>
+    <link rel="stylesheet" href="/styles/fol.css">
+</head>
+<body>
+    <nav>
+        <ul class="breadcrumb">
+                <li><a href="/">INICIO</a></li>
+                <li><a href="/folder">ESTUDIANTES</a></li>
+                <li><a href="#">DOCENTES</a></li>
+        </ul>
+    </nav>
+    <h1>Docentes capacitados para dar clases</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>DNI</th>
+                <th>Primer Nombre</th>
+                <th>Segundo Nombre</th>
+                <th>Tercer Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Número de Celular</th>
+                <th>Correo Electrónico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% results.forEach((doc) => { %>
+                <tr>
+                    <td><%= doc.dni %></td>
+                    <td><%= doc.primer_nombre %></td>
+                    <td><%= doc.segundo_nombre %></td>
+                    <td><%= doc.tercer_nombre %></td>
+                    <td><%= doc.apellido_paterno %></td>
+                    <td><%= doc.apellido_materno %></td>
+                    <td><%= doc.numero_de_celular %></td>
+                    <td><%= doc.correo_electronico %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

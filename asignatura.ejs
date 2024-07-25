@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignaturas y Horarios</title>
+    <link rel="stylesheet" type="text/css" href="/styles/lista.css">
+</head>
+<body>
+    <nav>
+        <ul class="breadcrumb">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="#">Asignatura</a></li>
+            <li><a href="/estudiantes">Estudiante</a></li>
+            <li><a href="#">Docente</a></li>
+            <li><a href="/clases">Clases</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="group">
+            <div class="item">
+                <div class="title">Horarios de las Asignaturas</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Hora Inicio</th>
+                            <th>Hora de Termino</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% horario.forEach(horario => { %>
+                            <tr>
+                                <td><%= horario.Dia %></td>
+                                <td><%= horario.Hora_de_inicio %></td>
+                                <td><%= horario.Hora_de_termino %></td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="item">
+                <div class="title">Asignaturas</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID de la Asignatura</th>
+                            <th>Nombre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% asignaturas.forEach(asignatura => { %>
+                            <tr>
+                                <td><%= asignatura.Id_de_la_asignatura %></td>
+                                <td><%= asignatura.Nombre %></td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
